@@ -101,18 +101,33 @@ a {
   color: #fff;
   transition: color 0.2s ease-in;
 }
-ahover {
+a:hover {
   color: #D4C17F;
 }
 
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  width: 1140px;
+  max-width: 1140px;
+}
+.container--small {
+  width: 840px;
 }
 
 .text-right {
   text-align: right;
+}
+
+.visually-hiden {
+  color: red;
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .header {
@@ -186,4 +201,28 @@ ahover {
 }
 .info--tel::before {
   background-image: url(../img/header/phone.svg);
+}
+
+.benefits {
+  padding: 120px 0;
+}
+
+.benefits__row {
+  display: flex;
+  -moz-column-gap: 70px;
+       column-gap: 70px;
+}
+
+.benefits__item {
+  text-align: center;
+}
+
+.benefits__item-img {
+  margin-bottom: 53px;
+}
+
+.benefits__item-text {
+  font-size: 20px;
+  line-height: 1.35;
+  font-family: "Roboto", sans-serif;
 }/*# sourceMappingURL=main.css.map */
