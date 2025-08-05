@@ -522,6 +522,11 @@ a:hover {
   padding: 180px 0;
   background: linear-gradient(180deg, #242B33 10%, rgba(36, 43, 51, 0) 51%, #242B33 90%), linear-gradient(rgba(36, 43, 51, 0.9), rgba(36, 43, 51, 0.9)), url("./../img/cta/cta-bg.jpg");
 }
+@media screen and (max-width: 959px) {
+  .cta {
+    padding: 60px 0;
+  }
+}
 
 .cta__title {
   margin-bottom: 17px;
@@ -531,9 +536,22 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media screen and (max-width: 959px) {
+  .cta__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 
 .cta__text {
   line-height: 1.5;
+}
+.cta__text p + p {
+  margin-top: 1em;
+}
+@media screen and (max-width: 959px) {
+  .cta__text {
+    font-size: 14px;
+  }
 }
 
 .cta__form {
@@ -541,88 +559,18 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   gap: 35px 30px;
 }
-
-/*
-
-
-
-.cta {
-    padding-top: 200px;
-    height: 560px;
-    background: linear-gradient(180deg, $dark 10%, rgba(36, 43, 51, 0%) 51%, $dark 90%), linear-gradient(rgba(36, 43, 51, 90%), rgba(36, 43, 51, 90%)),
-    url('./../img/cta/cta-bg.jpg');
+@media screen and (max-width: 959px) {
+  .cta__form {
+    grid-template-columns: 1fr;
+  }
 }
 
-
-.cta__title {
-
-}
-.cta__content {
-    display: flex;
-    justify-content: space-between;
-}
-.cta__content-left {
-
-}
-.cta__description {
-    padding-top: 24px;
-    width: 540px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #fff;
-}
-.cta__content-right {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+@media screen and (max-width: 959px) {
+  .form {
+    padding-top: 25px;
+  }
 }
 
-.form {
-
-}
-
-.form-group {
-    padding-top: 24px;
-    margin-left: 50px;
-    width: 255px;
-}
-
-.input {
-    color: #242B33;
-    font-size: 14px;
-    text-align: center;
-    width: 255px;
-    height: 50px;
-    background-color: $white;
-    opacity: 0.2;
-}
-
-.cta__p {
-    max-width: 255px;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 123%;
-    text-align: center;
-    color: #e7e7e7;
-}
-
-.cta__button {
-    width: 255px;
-    height: 50px;
-    background: $accent;
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 169%;
-    text-align: center;
-    color: #fff;
-}
-
-.cta__button, .cta__p {
-    margin-top: 30px;
-}
-
-*/
 .form__input {
   height: 50px;
   padding: 12px;
@@ -648,11 +596,16 @@ a:hover {
   text-align: center;
   line-height: 1.23;
 }
+@media screen and (max-width: 959px) {
+  .form__privacy--bottom {
+    grid-row: 4/5;
+  }
+}
 
 .frm__btn {
   height: 50px;
-  font-size: 16px;
   padding: 12px;
+  font-size: 16px;
   color: #fff;
   font-weight: 700;
   text-align: center;

@@ -4,6 +4,10 @@
 
     background: linear-gradient(180deg, $dark 10%, rgba(36, 43, 51, 0%) 51%, $dark 90%), linear-gradient(rgba(36, 43, 51, 90%), rgba(36, 43, 51, 90%)),
     url('./../img/cta/cta-bg.jpg');
+
+    @include mediaTablet {
+     padding: 60px 0;
+    }
 }
 
 .cta__title {
@@ -13,10 +17,22 @@
 .cta__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @include mediaTablet {
+        grid-template-columns: 1fr;
+    }
 }
 
 .cta__text {
     line-height: 1.5;
+
+    p + p {
+        margin-top: 1em;
+    }
+
+    @include mediaTablet {
+        font-size: 14px;
+    }
 }
 
 
@@ -24,88 +40,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 35px 30px;
+
+     @include mediaTablet {
+        grid-template-columns: 1fr;
+    }
 }
-
-
-
-/*
-
-
-
-.cta {
-    padding-top: 200px;
-    height: 560px;
-    background: linear-gradient(180deg, $dark 10%, rgba(36, 43, 51, 0%) 51%, $dark 90%), linear-gradient(rgba(36, 43, 51, 90%), rgba(36, 43, 51, 90%)),
-    url('./../img/cta/cta-bg.jpg');
-}
-
-
-.cta__title {
-
-}
-.cta__content {
-    display: flex;
-    justify-content: space-between;
-}
-.cta__content-left {
-
-}
-.cta__description {
-    padding-top: 24px;
-    width: 540px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #fff;
-}
-.cta__content-right {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.form {
-
-}
-
-.form-group {
-    padding-top: 24px;
-    margin-left: 50px;
-    width: 255px;
-}
-
-.input {
-    color: #242B33;
-    font-size: 14px;
-    text-align: center;
-    width: 255px;
-    height: 50px;
-    background-color: $white;
-    opacity: 0.2;
-}
-
-.cta__p {
-    max-width: 255px;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 123%;
-    text-align: center;
-    color: #e7e7e7;
-}
-
-.cta__button {
-    width: 255px;
-    height: 50px;
-    background: $accent;
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 169%;
-    text-align: center;
-    color: #fff;
-}
-
-.cta__button, .cta__p {
-    margin-top: 30px;
-}
-
-*/
